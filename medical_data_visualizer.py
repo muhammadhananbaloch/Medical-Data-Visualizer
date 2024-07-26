@@ -7,6 +7,8 @@ import numpy as np
 df = pd.read_csv('medical_examination.csv')
 
 # 2
+height_in_cm = df['height']
+height_in_m = height_in_cm / 100
 df['overweight'] = None
 
 # 3
