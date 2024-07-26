@@ -10,7 +10,7 @@ df = pd.read_csv('medical_examination.csv')
 height_in_cm = df['height']
 height_in_m = height_in_cm / 100
 bmi = df['weight'] / height_in_m ** 2
-df['overweight'] = None
+df['overweight'] = bmi.apply(lambda x: 1 if x > 25 else 0)
 
 # 3
 
