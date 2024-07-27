@@ -58,8 +58,8 @@ def draw_heat_map():
 
 
 
-    # 14
-    fig, ax = None
+    # 14 Set up the matplotlib figure
+    f, ax = plt.subplots(figsize=(11, 9))
 
     # 15
 
