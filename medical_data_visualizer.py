@@ -50,8 +50,8 @@ def draw_heat_map():
     & (df_heat['weight'] >= df_heat['weight'].quantile(0.025)) 
     & (df_heat['weight'] <= df_heat['weight'].quantile(0.975))]
 
-    # 12
-    corr = None
+    # 12 Calculate the correlation matrix and store it in the corr variable
+    corr = df_heat.corr()
 
     # 13
     mask = None
