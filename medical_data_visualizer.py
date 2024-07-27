@@ -27,7 +27,9 @@ def draw_cat_plot():
     
 
     # 7 Convert the data into long format and create a chart that shows the value counts of the categorical features using the following method provided by the seaborn library import : sns.catplot()
-
+    df_cat['cardio'] = df_cat['cardio'].astype('category')  
+    df_cat['variable'] = df_cat['variable'].astype('category')  
+    df_cat['value'] = df_cat['value'].astype('category')
 
 
     # 8
