@@ -61,7 +61,7 @@ def draw_heat_map():
     # 14 Set up the matplotlib figure
     f, ax = plt.subplots(figsize=(11, 9))
 
-    # 15
+    # 15 Plot the correlation matrix using the method provided by the seaborn library import: sns.heatmap()
 
 
 
