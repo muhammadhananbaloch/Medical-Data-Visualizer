@@ -33,7 +33,7 @@ def draw_cat_plot():
 
 
     # 8 Draw the catplot with 'sns.catplot()'
-    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar')
+    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar').fig
 
 
     # 9
