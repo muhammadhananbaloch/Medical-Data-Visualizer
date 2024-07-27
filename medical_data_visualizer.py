@@ -32,8 +32,8 @@ def draw_cat_plot():
     df_cat['value'] = df_cat['value'].astype('category')
 
 
-    # 8
-    fig = None
+    # 8 Draw the catplot with 'sns.catplot()'
+    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar')
 
 
     # 9
