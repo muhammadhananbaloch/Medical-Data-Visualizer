@@ -44,6 +44,7 @@ def draw_cat_plot():
 # 10
 def draw_heat_map():
     # 11 Clean the data in the df_heat variable by filtering out incorrect data
+    df_heat = df
     df_heat = df_heat[(df_heat['ap_lo'] <= df_heat['ap_hi'])
     & (df_heat['height'] >= df_heat['height'].quantile(0.025)) 
     & (df_heat['height'] <= df_heat['height'].quantile(0.975)) 
@@ -59,11 +60,11 @@ def draw_heat_map():
 
 
     # 14 Set up the matplotlib figure
-    f, ax = plt.subplots(figsize=(11, 9))
+    fig, ax = plt.subplots(figsize=(11, 9))
 
     # 15 Plot the correlation matrix using the method provided by the seaborn library import: sns.heatmap()
 
-
+    ax = sns.heatmap(corr, mask=mask, center=0, vmax=.1, linewidths=0.5, cbar_kws={"shrink": .5})
 
     # 16
     fig.savefig('heatmap.png')
