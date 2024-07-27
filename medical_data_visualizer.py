@@ -43,8 +43,12 @@ def draw_cat_plot():
 
 # 10
 def draw_heat_map():
-    # 11
-    df_heat = None
+    # 11 Clean the data in the df_heat variable by filtering out incorrect data
+    df_heat = df_heat[(df_heat['ap_lo'] <= df_heat['ap_hi'])
+    & (df_heat['height'] >= df_heat['height'].quantile(0.025)) 
+    & (df_heat['height'] <= df_heat['height'].quantile(0.975)) 
+    & (df_heat['weight'] >= df_heat['weight'].quantile(0.025)) 
+    & (df_heat['weight'] <= df_heat['weight'].quantile(0.975))]
 
     # 12
     corr = None
